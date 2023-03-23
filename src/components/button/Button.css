@@ -1,0 +1,178 @@
+button {
+    border: none;
+    border-radius: var(--border-radius);
+    padding: 8px 16px;
+    font-family: 'Noto Sans';
+    color: var(--text);
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    gap: 0.2em;
+}
+
+.label {
+    margin-top: 3px;
+}
+
+.shadow {
+    box-shadow: var(--box-shadow);
+}
+
+.sm {
+    height: var(--size-sm);
+}
+
+.md {
+    height: var(--size-md);
+}
+
+.lg {
+    height: var(--size-lg);
+}
+
+.outline.primary {
+    border: 1px solid var(--color-primary);
+    color: var(--color-primary);
+    background-color: #fff;
+}
+
+.outline.primary:hover {
+    background-color: var(--color-primary-outline);
+}
+
+.text.primary {
+    color: var(--color-primary);
+    background-color: transparent;
+    box-shadow: none;
+}
+
+.text.primary:hover, .text.primary:focus {
+    background-color: var(--color-primary-outline);
+}
+
+.filled.primary {
+    background-color: var(--color-primary);
+    color: var(--text-light);
+}
+
+.filled.primary:hover, .filled.primary:focus {
+    background-color: var(--color-primary-hover);
+}
+
+.filled.default {
+    background-color: var(--color-default);
+}
+
+.outline.default {
+    border: 1px solid var(--color-default);
+    color: var(--text-default);
+    background-color: #fff;
+}
+
+.text.default {
+    color: var(--text-default);
+    background-color: transparent;
+    box-shadow: none;
+}
+
+.text.default:hover, .text.default:focus {
+    background-color: var(--color-default-outline);
+}
+
+.outline.default:hover {
+    background-color: var(--color-default-outline);
+}
+
+.filled.default:hover, .filled.default:focus {
+    background-color: var(--color-default-hover);
+}
+
+.filled.secondary {
+    background-color: var(--color-secondary);
+    color: var(--text-light);
+}
+
+.filled.secondary:hover, .filled.secondary:focus {
+    background-color: var(--color-secondary-hover);
+    color: var(--text-light);
+}
+
+.text.secondary {
+    color: var(--color-secondary);
+    background-color: transparent;
+    box-shadow: none;
+}
+
+.text.secondary:hover, .text.secondary:focus {
+    background-color: var(--color-secondary-outline);
+}
+
+.outline.secondary {
+    border: 1px solid var(--color-secondary);
+    color: var(--color-secondary);
+    background-color: #fff;
+}
+
+.outline.secondary:hover {
+    background-color: var(--color-secondary-outline);
+}
+
+.filled.danger {
+    background-color: var(--color-danger);
+    color: var(--text-light);
+}
+
+.text.danger {
+    color: var(--color-danger);
+    background-color: transparent;
+    box-shadow: none;
+}
+
+.text.danger:hover, .text.danger:focus {
+    background-color: var(--color-danger-outline);
+}
+
+.filled.danger:hover, .filled.danger:focus {
+    background-color: var(--color-danger-hover);
+    color: var(--text-light);
+}
+
+.outline.danger {
+    border: 1px solid var(--color-danger);
+    color: var(--color-danger);
+    background-color: #fff;
+}
+
+.outline.danger:hover {
+    background-color: var(--color-danger-outline);
+}
+
+button:disabled,
+button[disabled],
+button:disabled:hover,
+button[disabled]:hover {
+    border: none;
+    color: var(--text-disabled);
+    background-color: var(--color-default);
+}
+
+button:disabled.text,
+button[disabled].text,
+button:disabled.text:hover,
+button[disabled].text:hover {
+    color: var(--text-disabled);
+    background-color: transparent;
+    box-shadow: none;
+}
+
+button:disabled.outline,
+button[disabled].outline,
+button:disabled.outline:hover,
+button[disabled].outline:hover {
+    color: var(--text-disabled);
+    border: 1px solid var(--text-disabled);
+    background-color: transparent;
+}
