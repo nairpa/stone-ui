@@ -1,5 +1,5 @@
 import React, { ButtonHTMLAttributes, DetailedHTMLProps, useRef } from "react";
-import "./Button.css";
+import "./Button.scss";
 
 type Variants = 'outline' | 'filled' | 'text';
 type Sizes = 'sm' | 'md' | 'lg';

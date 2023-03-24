@@ -11,7 +11,7 @@
   "scripts": {
     "test": "jest",
     "rollup": "rollup -c",
-    "storybook": "start-storybook -p 6006",
+    "storybook": "SET NODE_OPTIONS=--openssl-legacy-provider && start-storybook -p 6006",
     "build-storybook": "build-storybook"
   },
   "keywords": [
@@ -39,7 +39,11 @@
     "@storybook/addon-interactions": "^6.5.16",
     "@storybook/addon-links": "^6.5.16",
     "@storybook/builder-webpack4": "^6.5.16",
+    "@storybook/builder-webpack5": "^6.5.16",
     "@storybook/manager-webpack4": "^6.5.16",
+    "@storybook/manager-webpack5": "^6.5.16",
+    "@storybook/preset-create-react-app": "^4.1.2",
+    "@storybook/preset-scss": "^1.0.3",
     "@storybook/react": "^6.5.16",
     "@storybook/testing-library": "^0.0.13",
     "@testing-library/react": "^14.0.0",
@@ -47,19 +51,26 @@
     "@types/react": "^18.0.28",
     "babel-jest": "^29.5.0",
     "babel-loader": "^8.3.0",
+    "css-loader": "^6.7.3",
     "identity-obj-proxy": "^3.0.0",
     "jest": "^29.5.0",
     "jest-environment-jsdom": "^29.5.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-scripts": "^5.0.1",
     "rollup": "^3.20.1",
     "rollup-plugin-dts": "^5.3.0",
     "rollup-plugin-postcss": "^4.0.2",
+    "sass": "^1.60.0",
+    "sass-loader": "^13.2.1",
+    "style-loader": "^3.3.2",
     "tslib": "^2.5.0",
-    "typescript": "^5.0.2"
+    "typescript": "^5.0.2",
+    "webpack": "^5.76.3"
   },
   "peerDependencies": {
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "react-scripts": "^5.0.1"
   }
 }
