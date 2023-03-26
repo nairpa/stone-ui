@@ -154,25 +154,25 @@ button:disabled,
 button[disabled],
 button:disabled:hover,
 button[disabled]:hover {
-    border: none;
-    color: var(--text-disabled);
-    background-color: var(--color-default);
+    border: none!important;
+    color: var(--text-disabled)!important;
+    background-color: var(--color-default)!important;
 }
 
 button:disabled.text,
 button[disabled].text,
 button:disabled.text:hover,
 button[disabled].text:hover {
-    color: var(--text-disabled);
-    background-color: transparent;
-    box-shadow: none;
+    color: var(--text-disabled)!important;
+    background-color: transparent!important;
+    box-shadow: none!important;
 }
 
 button:disabled.outline,
 button[disabled].outline,
 button:disabled.outline:hover,
 button[disabled].outline:hover {
-    color: var(--text-disabled);
-    border: 1px solid var(--text-disabled);
-    background-color: transparent;
+    color: var(--text-disabled)!important;
+    border: 1px solid var(--text-disabled)!important;
+    background-color: transparent!important;
 }
