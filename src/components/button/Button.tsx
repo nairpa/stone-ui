@@ -1,4 +1,4 @@
-import React, { ButtonHTMLAttributes, DetailedHTMLProps } from "react";
+import { ButtonHTMLAttributes, DetailedHTMLProps } from "react";
 import "./Button.scss";
 
 type Variants = 'outline' | 'filled' | 'text';
@@ -14,12 +14,9 @@ export interface ButtonProps extends DetailedHTMLProps<ButtonHTMLAttributes<HTML
 }
 
 const Button = ({label = "Button", variant = 'filled', disableShadow = false, size = 'md', color='primary', ...props} : ButtonProps) => {
-    const ref = React.useRef<HTMLButtonElement>(null);
- 
     return (
         <button 
             className={`${variant} ${disableShadow ? '' : 'shadow'} ${size} ${color}`} 
-            ref={ref} 
             {...props}
         >  
             <span className="label">{ label }</span> 
