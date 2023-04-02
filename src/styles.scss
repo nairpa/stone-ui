@@ -23,6 +23,8 @@
     --size-lg: #{$size-lg};
     --border-radius: #{$border-radius};
     --box-shadow: #{$box-shadow}; 
+    --input-border: #{$input-border};
+    --input-border-hover: #{$input-border-hover};
   }
   
   *, html, body {

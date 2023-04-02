@@ -1,0 +1,66 @@
+.text-input {
+    label {
+        display: block;
+        transition: all 0.2s ease-in-out;
+    }
+
+    input {
+        padding: 1.3em;
+        border-radius: var(--border-radius);
+        border-color: var(--input-border);
+        border-style: solid;
+        transition: all 0.2s ease-in-out;
+        color: var(--input-border);
+
+        &.full-w {
+            width: 100%;
+            box-sizing: border-box;
+        }
+    }
+
+    input:disabled {
+        border-color: #E0E0E0;
+        background-color: #F2F2F2;
+    }
+
+    span {
+        display: block;
+        font-size: 10px;
+        font-weight: 400;
+        color: var(--input-border)
+    }
+    
+    input:invalid {
+        border-color: var(--color-danger);
+    }
+
+    &:focus-within {
+        input {
+            outline: none;
+            border-color: var(--color-primary);
+        }
+
+        label {
+            color: var(--color-primary);
+        }
+    }
+
+    &:hover {
+        border-color: var(--input-border-hover);
+    }
+
+    &.error {
+        label, span {
+            color: var(--color-danger);
+        }
+
+        input {
+            border-color: var(--color-danger);
+        }
+    }
+
+    &.full-w {
+        width: 100%;
+    }
+}
+
