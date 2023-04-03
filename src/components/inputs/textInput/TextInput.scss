@@ -1,11 +1,11 @@
-.text-input {
+.text-input {   
     label {
         display: block;
         transition: all 0.2s ease-in-out;
     }
 
     input {
-        padding: 1.3em;
+        padding: 0 1em;
         border-radius: var(--border-radius);
         border-color: var(--input-border);
         border-style: solid;
@@ -16,6 +16,14 @@
             width: 100%;
             box-sizing: border-box;
         }
+
+        &.sm {
+            height: var(--input-size-sm);
+        }
+        
+        &.md {
+            height: var(--input-size-md);
+        }        
     }
 
     input:disabled {
@@ -56,6 +64,26 @@
 
         input {
             border-color: var(--color-danger);
+        }
+
+        &:focus {
+            label, span {
+                color: var(--color-danger);
+            }
+    
+            input {
+                border-color: var(--color-danger);
+            }
+        }
+
+        &:hover {
+            label, span {
+                color: var(--text)
+            }
+
+            input {
+                border-color: var(--input-border-hover);
+            }
         }
     }
 

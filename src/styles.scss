@@ -25,6 +25,8 @@
     --box-shadow: #{$box-shadow}; 
     --input-border: #{$input-border};
     --input-border-hover: #{$input-border-hover};
+    --input-size-sm: #{$input-size-sm};
+    --input-size-md: #{$input-size-md};
   }
   
   *, html, body {

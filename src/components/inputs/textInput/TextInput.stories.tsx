@@ -5,12 +5,14 @@ export default {
     title: 'Components/Inputs',
     component: TextInput,
     argTypes: {
-   
+      disabled: { control: 'boolean' },
+      inputSize: { control: 'radio', options: ['sm', 'md'] },
+      error: { control: 'string' }
     },
     parameters: {
       docs: {
         description: {
-          component: "Button component that can take the following states: color, size, variant, disabled, disableShadow."
+          component: "Text Input component that can be set to error state or disabled state"
         } 
       }
     }
@@ -19,6 +21,16 @@ export default {
 const Template: ComponentStory<typeof TextInput> = (args) => <TextInput {...args} />;
 
 export const Default = Template.bind({});
-Default.args = {
-  color: 'default',
+
+export const Playground = Template.bind({});
+Playground.args = {};
+
+export const Error = Template.bind({});
+Error.args = {
+  error: 'El campo es requerido'
+};
+
+export const Disabled = Template.bind({});
+Disabled.args = {
+  disabled: true
 };
