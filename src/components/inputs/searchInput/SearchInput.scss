@@ -1,0 +1,26 @@
+.option {
+    &-container {
+        border-radius: 0 0 var(--border-radius) var(--border-radius);
+        box-shadow: var(--box-shadow);
+        margin-top: -11px;
+        background-color: white;
+        z-index: 1;
+        position: relative;
+
+        > ul {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+        }
+    }
+
+    &-item {
+        padding: 0.5em;
+        cursor: pointer;
+        transition: all 0.2s ease-in-out;
+
+        &:hover {
+            background-color: var(--color-default-hover);
+        }
+    }
+}
