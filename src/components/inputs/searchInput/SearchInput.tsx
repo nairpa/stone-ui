@@ -5,23 +5,30 @@ import "./SearchInput.scss";
 type Sizes = 'sm' | 'md' ;
 
 export interface SearchInputProps extends TextInputProps {
-    options: string[]
+    options: string[],
+    handleChange: (event: string) => void;
 }
 
 const countries = [ 'Argentina', 'Brasil', 'Colombia', 'Peru' ]
-const SearchInput= ({ id, options = countries, ...props}: SearchInputProps) => {
-    const [ search, setSearch ] = useState('');
+const SearchInput= ({ id, options = countries, handleChange, ...props}: SearchInputProps) => {
+    const [ open, setOpen ] = useState(false);
 
-    const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-        setSearch(event.target.value);
+    const onChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+        handleChange(event.target.value);
+        setOpen(true)
+    }
+
+    const onSelection = (event: React.BaseSyntheticEvent) => {
+        handleChange(event.target.outerText);
+        setOpen(false)
     }
 
     const showSuggestions = () => {
-        if(options?.some(option => option.trim().includes(search))) {
+        if(open) {
             return (
                 <div className="option-container">
                     <ul>
-                        { options.filter(option => option.includes(search)).map(option => <li className="option-item">{option}</li>) }
+                        { options.map(option => <li className="option-item" onClick={(e) => onSelection(e)}>{option}</li>) }
                     </ul>
                 </div>
             )
@@ -33,7 +40,7 @@ const SearchInput= ({ id, options = countries, ...props}: SearchInputProps) => {
 
     return (
         <>
-            <TextInput id={id} onChange={(e) => handleChange(e)} {...props}/>
+            <TextInput id={id} onChange={(e) => onChange(e)} {...props}/>
             { showSuggestions() }
         </>
     )
